@@ -1,4 +1,5 @@
 let currentScore = 0
+let x = 0
 
 function score(){
   let scoreboardElement = document.getElementById("scoreboard")
@@ -6,6 +7,28 @@ function score(){
   currentScore += 1
 }
 
-// function scoreBoard(){
-//   document.getElementById("scoreboard")
-//   scoreboard ++
+function logScore(){
+x ++
+console.log(x);
+}
+
+let secretCode = "8008"
+let yourCode = ""
+
+function eight(){
+  yourCode += 8
+}
+
+function zero(){
+  yourCode += 0
+}
+
+function submit(){
+  if(secretCode == yourCode){
+    surprise()
+  }
+  else{
+    curse()
+    window.close
+  }
+}
