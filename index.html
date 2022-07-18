@@ -15,14 +15,36 @@
 
 </head>
 
-<body class="container-fluid">
-  <div class="row bg-warning">
-    <h1 class="col-6">SCORE:</h1>
-    <h1 class="col-6" id="scoreboard">0</h1>
-  </div>
-  <div class="row p-3">
-    <button class="btn-btn-primary col-4" onclick="score()">SCORE!</button>
-  </div>
+<body>
+  <header></header>
+  <main class="container-fluid">
+    <section class="row hero-image text-center justify-content-center align-items-center">
+      <div class="card col-6" id="scoreboard">
+        <div class="row align-items-center">
+          <h1 class="col">HOME SCORE:</h1>
+          <h1 class="col">AWAY SCORE:</h1>
+        </div>
+        <div class="p-3 row text-center">
+          <h1 class="col" id="home-score">0</h1>
+          <h1 class="col" id="away-score">0</h1>
+        </div>
+        <div class="p-3 row">
+          <button class="btn-btn-primary col" onclick="usScore(1)">SCORE 1!</button>
+          <button class="btn-btn-primary col" onclick="themScore(1)">SCORE 1!</button>
+        </div>
+        <div class="p-3 row">
+          <button class="btn-btn-primary col" onclick="usScore(3)">SCORE 3!</button>
+          <button class="btn-btn-primary col" onclick="themScore(3)">SCORE 3!</button>
+        </div>
+        <div class="p-2 row">
+          <button class="btn-btn-primary col" onclick="clearHomeScore()">Clear Home</button>
+          <button class="btn-btn-primary col" onclick="clearAll()">Clear Board</button>
+          <button class="btn-btn-primary col" onclick="clearAwayScore()">Clear Away</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
 
   <script src="app.js"></script>
 

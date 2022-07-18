@@ -1,10 +1,41 @@
-let currentScore = 0
-let x = 0
+let homeScore = 0
+let awayScore = 0
 
-function score(){
-  let scoreboardElement = document.getElementById("scoreboard")
-  scoreboardElement.innerText = currentScore.toString()
-  currentScore += 1
+function usScore(points){
+  console.log(points);
+  let homeScoreElm = document.getElementById("home-score")
+  console.log(homeScore);
+  homeScore += points
+  console.log(homeScore);
+  console.log(points);
+  homeScoreElm.innerText = homeScore
+}
+
+function themScore(points){
+  let awayScoreElm = document.getElementById("away-score")
+  awayScore += points
+  awayScoreElm.innerText = awayScore
+}
+
+function clearHomeScore(){
+  homeScore = 0
+  let homeScoreElm = document.getElementById("home-score")
+  homeScoreElm.innerText = homeScore
+}
+
+function clearAwayScore(){
+  awayScore = 0
+  let awayScoreElm = document.getElementById("away-score")
+  awayScoreElm.innerText = awayScore
+}
+
+function clearAll(){
+  awayScore = 0
+  homeScore = 0
+  let awayScoreElm = document.getElementById("away-score")
+  awayScoreElm.innerText = awayScore
+  let homeScoreElm = document.getElementById("home-score")
+  homeScoreElm.innerText = homeScore
 }
 
 function logScore(){
@@ -32,3 +63,5 @@ function submit(){
     window.close
   }
 }
+
+// DEBUGGER!!!!!!!!
